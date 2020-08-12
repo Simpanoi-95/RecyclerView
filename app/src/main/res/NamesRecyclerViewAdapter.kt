@@ -16,9 +16,18 @@ class NamesRecyclerViewAdapter (val namesList: List<String>) :
             return namesList.size
         }
         override fun onBindViewHolder(holder: NamesViewHolder, position: Int) {
-            holder.rowView.tvName.text = namesList.get(position)
+            val item: String =namesList[position]
+            holder.rowView.etstudentDetails.text=item.
+
+
+
+
+
+
+
         }
         class NamesViewHolder(val rowView: View) : RecyclerView.ViewHolder(rowView)
+
     }
 
 
