@@ -5,7 +5,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.recyclerview.R
 import kotlinx.android.synthetic.main.row_name_item.view.*
 
-class NamesRecyclerViewAdapter (val namesList: List<String>) :
+class NamesRecyclerViewAdapter(val namesList: MutableList<students>) :
     RecyclerView.Adapter<NamesRecyclerViewAdapter.NamesViewHolder>(){
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NamesViewHolder {
             val itemView = LayoutInflater.from(parent.context)
@@ -16,15 +16,10 @@ class NamesRecyclerViewAdapter (val namesList: List<String>) :
             return namesList.size
         }
         override fun onBindViewHolder(holder: NamesViewHolder, position: Int) {
-            val item: String =namesList[position]
-            holder.rowView.etstudentDetails.text=item.
-
-
-
-
-
-
-
+            val item: students =namesList[position]
+            holder.rowView.etstudentDetails.text= item.name
+            holder.rowView.etdateOfBirth.text= item.dateOfBirth
+            holder.rowView.ethobby.text= item.hobby
         }
         class NamesViewHolder(val rowView: View) : RecyclerView.ViewHolder(rowView)
 
